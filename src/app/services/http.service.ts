@@ -12,4 +12,9 @@ export class HttpService {
       .map((response: Response)=> response.json())
   }
 
+  putDatos(data){
+    let datos = JSON.stringify(data);
+  	return this.http.put('https://exam-4dd06.firebaseio.com/.json', datos).map((response: Response) => response.json());
+  }
+
 }

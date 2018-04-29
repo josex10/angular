@@ -1,0 +1,12 @@
+.segundario{
+    background-color: white;
+    margin-top: 3vh;
+}
+.cabecera{
+    padding: 3vh;
+}
+
+.catalogo{
+    height:70vh;
+    overflow-y: scroll;
+}

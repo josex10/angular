@@ -9,7 +9,7 @@
         <label for="loginFormUserName">Nombre de Usuario *</label>
         <input type="text" class="form-control" id="loginFormUserName" aria-describedby="userNameHelp" 
           placeholder="Nombre de usuario" ngModel  name="loginFormUserName" #loginFormUserName required>
-        <small id="userNameHelp" class="form-text text-muted">Usuario de prueba: nextu2018</small>
+        <small id="userNameHelp" class="form-text text-muted">Usuario de prueba: jose</small>
       </div>
 
 
@@ -17,11 +17,15 @@
         <label for="loginFormPassword">Contraseña *</label>
         <input type="password" class="form-control" id="loginFormPassword" aria-describedby="passwordHelp" 
           placeholder="Contraseña" ngModel name="loginFormPassword" required>
-        <small id="passwordHelp" class="form-text text-muted">Contraseña de prueba: test123 </small>
+        <small id="passwordHelp" class="form-text text-muted">Contraseña de prueba: jose123 </small>
       </div>
 
       <div class="botonera">
           <button type="submit" [disabled]="!loginForm.valid" class="btn btn-danger">Ingresar</button>
+      </div>
+
+      <div *ngIf="existenErrores" class="mensajes">
+        <p><i class="fas fa-exclamation-circle"></i>   {{mensaje}}</p>
       </div>
     </form>
   </div>
